@@ -18,11 +18,11 @@ pipeline {
  }
  }
  
- stage('Cloning Git') {
- steps {
- checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/ralphcarlisle/devops-code-challenge.git']]]) 
- }
- }
+ //stage('Cloning Git') {
+ //steps {
+ //checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/ralphcarlisle/devops-code-challenge.git']]]) 
+ //}
+ //}
  
  // Building Docker images
  stage('Building lightfeather container image') {
