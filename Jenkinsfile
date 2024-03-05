@@ -18,17 +18,12 @@ pipeline {
  }
  }
  
- //stage('Cloning Git') {
- //steps {
- //checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/ralphcarlisle/devops-code-challenge.git']]]) 
- //}
- //}
  
  // Building Docker images
  stage('Building lightfeather container image') {
  steps{
  script {
- sh "docker build --file=lightfeather.dockerfile -t lightfeather:latest"
+ sh "docker build --file=lightfeather.dockerfile -t lightfeather:latest ."
  }
  }
  }
