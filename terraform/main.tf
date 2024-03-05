@@ -119,10 +119,6 @@ resource "aws_cloudwatch_log_group" "lightfeather" {
   name = "/ecs/lightfeather"
 }
 
-resource "aws_cloudwatch_log_group" "frontend" {
-  name = "/ecs/frontend"
-}
-
 resource "aws_ecs_cluster" "app" {
   name = "app"
 }
