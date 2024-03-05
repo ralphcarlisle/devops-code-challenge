@@ -28,7 +28,7 @@ pipeline {
  stage('Building lightfeather container image') {
  steps{
  script {
- sh "docker.build --file=lightfeather.dockerfile -t lightfeather:latest"
+ sh "docker build --file=lightfeather.dockerfile -t lightfeather:latest"
  }
  }
  }
