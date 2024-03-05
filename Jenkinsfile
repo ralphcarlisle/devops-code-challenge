@@ -42,8 +42,7 @@ pipeline {
  stage('Applying terraform scripts to the aws environment') {
  steps{ 
  script {
- sh "terraform init"
- sh "terraform apply -auto-approve"
+ sh "cd ${WORKSPACE}/devops-code-challenge/terraform && terraform init && terraform plan && terraform apply -auto-approve"
  }
  }
  }
