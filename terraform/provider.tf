@@ -14,10 +14,14 @@ provider "aws" {
 
 terraform {
   required_version = ">= 1.7.2"
+  backend "s3" {
+    bucket = "lightfeather"
+    key    = "state"
+    region = "us-east-2"
 
-  backend "local" {
-    path = "/home/ec2-user/terraform.tfstate"
-  }
+#  backend "local" {
+#    path = "/home/ec2-user/terraform.tfstate"
+#  }
 
   required_providers {
     aws = {
