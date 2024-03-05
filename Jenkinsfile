@@ -23,7 +23,7 @@ pipeline {
  stage('Building lightfeather container image') {
  steps{
  script {
- sh "cd ${WORKSPACE} && docker build --file=lightfeather.dockerfile -t lightfeather:latest ."
+ sh "cd ${WORKSPACE}/devops-code-challenge && docker build --file=lightfeather.dockerfile -t lightfeather:latest ."
  }
  }
  }
