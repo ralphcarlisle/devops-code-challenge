@@ -22,6 +22,7 @@ terraform {
 #  backend "local" {
 #    path = "/home/ec2-user/terraform.tfstate"
 #  }
+  }
 
   required_providers {
     aws = {
